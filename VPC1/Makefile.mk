@@ -16,8 +16,8 @@ nonprod_apply: ## Apply Module in NonProd Environement
 	@terraform apply -auto-approve -var-file=prodcidr.tfvars
 prod_destroy: ## Apply Module in NonProd Environement
 	@terraform init
-	@terraform apply -auto-destroy -var-file=prodcidr.tfvars
+	@terraform destroy -auto-approve -var-file=prodcidr.tfvars
 nonprod_destroy: ## Apply Module in NonProd Environement
 	@terraform init
-	@terraform apply -auto-destroy -var-file=prodcidr.tfvars
+	@terraform destroy -auto-approve -var-file=prodcidr.tfvars
 
