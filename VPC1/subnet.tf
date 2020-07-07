@@ -13,7 +13,7 @@ resource "aws_subnet" "private" {
   count = length(data.aws_availability_zones.azs.names)
   vpc_id     = aws_vpc.vpc.id
   availability_zone = data.aws_availability_zones.azs.names[count.index]
-  cidr_block = cidrsubnet(var.cidr,8,length(data.aws_availability_zones.azs.names)+count.index+1)
+  cidr_block = cidrsubnet(var.cidr,8,length(data.aws_availability_zones.azs.names)+count.index)
 
   tags = {
     Name = "private-${var.tags}-subnet-${count.index}"
