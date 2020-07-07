@@ -9,15 +9,15 @@ help:
 
 prod_apply: ## Apply Module in Prod Environement
 	@terraform init
-	@terraform apply -auto-approve -var-file=devcidr.tfvars
+	@terraform apply -auto-approve -var-file=prodcidr.tfvars
 
 nonprod_apply: ## Apply Module in NonProd Environement
 	@terraform init
-	@terraform apply -auto-approve -var-file=prodcidr.tfvars
+	@terraform apply -auto-approve -var-file=devcidr.tfvars
 prod_destroy: ## Apply Module in NonProd Environement
 	@terraform init
-	@terraform destroy -auto-approve -var-file=devcidr.tfvars
+	@terraform destroy -auto-approve -var-file=prodcidr.tfvars
 nonprod_destroy: ## Apply Module in NonProd Environement
 	@terraform init
-	@terraform destroy -auto-approve -var-file=prodcidr.tfvars
+	@terraform destroy -auto-approve -var-file=devcidr.tfvars
 
