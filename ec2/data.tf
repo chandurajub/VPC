@@ -1,3 +1,3 @@
 data "aws_vpc" "vpc" {
-  id = "${var.vpc_id}"
+  id = "${local.vpc_id}"
 }
