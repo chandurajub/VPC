@@ -5,5 +5,5 @@ locals {
 
   vpc_id = data.terraform_remote_state.vpc.outputs.vpc_id
 
-  manage_vpc = data.terraform_remote_state.vpc.outputs.manage_vpc
+  //manage_vpc = data.terraform_remote_state.vpc.outputs.manage_vpc
 }

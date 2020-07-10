@@ -36,6 +36,7 @@ resource "aws_route_table_association" "private" {
   route_table_id = aws_route_table.private.id
 }
 
+/*
 resource "aws_route" "public" {
     route_table_id = aws_route_table.public.id
   destination_cidr_block = "${data.aws_vpc.manage_vpc.cidr_block}"
@@ -61,6 +62,7 @@ resource "aws_route" "manage" {
 
 
 }
+*/
 
 
 

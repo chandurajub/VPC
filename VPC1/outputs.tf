@@ -8,6 +8,8 @@ output "public_sub" {
 output "private_sub" {
   value = aws_subnet.private.*.id
 }
+/*
 output "manage_vpc" {
   value = var.manage_vpc
 }
+*/
