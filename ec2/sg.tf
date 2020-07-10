@@ -23,7 +23,7 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 resource "aws_security_group" "allow_all" {
-  name        = "allow_ssh"
+  name        = "allow_all"
   description = "Allow ssh inbound traffic"
   vpc_id      = "${local.vpc_id}"
 
@@ -43,6 +43,6 @@ resource "aws_security_group" "allow_all" {
   }
 
   tags = {
-    Name = "allow_all"
+    Name = "allow_alltag"
   }
 }
