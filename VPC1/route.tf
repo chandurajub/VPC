@@ -36,3 +36,31 @@ resource "aws_route_table_association" "private" {
   route_table_id = aws_route_table.private.id
 }
 
+resource "aws_route" "public" {
+    route_table_id = aws_route_table.public.id
+    cidr_block = data.aws_vpc.manage_vpc.cidr_block
+    gateway_id = aws_vpc_peering_connection.peer.id
+    depends_on = [aws_route_table.public.id]
+
+
+}
+resource "aws_route" "private" {
+    route_table_id = aws_route_table.private.id
+    cidr_block = data.aws_vpc.manage_vpc.cidr_block
+    gateway_id = aws_vpc_peering_connection.peer.id
+    depends_on = [aws_route_table.private.id]
+
+
+}
+resource "aws_route" "manage" {
+  route_table_id = data.aws_vpc.manage_vpc.main_route_table_id
+  cidr_block = aws_vpc.vpc.cidr_block
+  gateway_id = aws_vpc_peering_connection.peer.id
+  depends_on = [data.aws_vpc.manage_vpc.main_route_table_id]
+
+
+
+}
+
+
+
