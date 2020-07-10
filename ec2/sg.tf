@@ -8,7 +8,7 @@ resource "aws_security_group" "allow_ssh" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = [data.aws_vpc.vpc.cidr_block]
+    cidr_blocks = [data.aws_vpc.vpc.cidr_block, data.aws_vpc.manage_vpc.cidr_block]
   }
 
   egress {

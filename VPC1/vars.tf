@@ -4,4 +4,4 @@ variable "cidr" {
 variable "tags" {
 
 }
-//variable "manage_vpc" {}
+variable "manage_vpc" {}
