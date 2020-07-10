@@ -22,6 +22,7 @@ resource "aws_security_group" "allow_ssh" {
     Name = "allow_ssh"
   }
 }
+/*
 resource "aws_security_group" "allow_all" {
   name        = "allow_all"
   description = "Allow ssh inbound traffic"
@@ -45,4 +46,4 @@ resource "aws_security_group" "allow_all" {
   tags = {
     Name = "allow_alltag"
   }
-}
+}*/
