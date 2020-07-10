@@ -43,6 +43,6 @@ resource "aws_security_group" "allow_all" {
   }
 
   tags = {
-    Name = "allow_ssh"
+    Name = "allow_all"
   }
 }
