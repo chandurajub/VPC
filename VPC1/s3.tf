@@ -6,6 +6,7 @@ terraform {
   }
 }
 
+/*
 data "terraform_remote_state" "vpc" {
   backend = "s3"
   config = {
@@ -13,4 +14,4 @@ data "terraform_remote_state" "vpc" {
     key    = "env:/prod/vpc/tfstate"
     region = "us-west-2"
   }
-}
+}*/
