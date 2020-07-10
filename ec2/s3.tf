@@ -5,14 +5,14 @@ terraform {
     region = "us-west-2"
   }
 }
-data "terraform_remote_state" "vpc" {
+/*data "terraform_remote_state" "vpc" {
   backend = "s3"
   config = {
     bucket = "masterbucket01"
     key    = "env:/prod/ec2/tfstate"
     region = "us-west-2"
   }
-}
+}*/
 data "terraform_remote_state" "vpc" {
   backend = "s3"
   config = {
