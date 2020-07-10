@@ -32,7 +32,7 @@ resource "aws_security_group" "allow_all" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = [data.aws_vpc.vpc.cidr_block, data.aws_vpc.manage_vpc.cidr_block]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
