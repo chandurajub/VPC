@@ -11,7 +11,7 @@ prod_apply: ## Apply Module in Prod Environement
 	@terraform init
 	@terraform workspace new prod || terraform workspace select prod
 #	@terraform apply -auto-approve -var-file=prodcidr.tfvars
-	@terraform apply -auto-approve -var-file=prodvars.tf
+	@terraform apply -auto-approve
 
 
 nonprod_apply: ## Apply Module in NonProd Environement
@@ -23,7 +23,7 @@ prod_destroy: ## Apply Module in NonProd Environement
 	@terraform init
 	@terraform workspace new prod || terraform workspace select prod
 #	@terraform destroy -auto-approve -var-file=prodcidr.tfvars
-	@terraform apply -auto-approve -var-file=prodvars.tf
+	@terraform apply -auto-approve
 nonprod_destroy: ## Apply Module in NonProd Environement
 	@terraform init
 	@terraform workspace new nonprod || terraform workspace select nonprod
