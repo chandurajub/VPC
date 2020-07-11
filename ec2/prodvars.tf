@@ -18,9 +18,9 @@ variable "private_sub" {
 
 }
 variable "vpc_id" {
-  default =  vpc-0cf1926b83a2d0894
+  default =  "vpc-0cf1926b83a2d0894"
 }
 variable "manage_vpc" {
-  default =  vpc-af6b19d7
+  default =  "vpc-af6b19d7"
 
 }
