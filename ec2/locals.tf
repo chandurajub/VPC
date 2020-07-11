@@ -1,9 +1,16 @@
-locals {
-  public_sub = data.terraform_remote_state.vpc.outputs.public_sub
+/*locals {
+  public_sub = var.public_sub
 
-  private_sub = data.terraform_remote_state.vpc.outputs.private_sub
+  private_sub = var.private_sub
 
-  vpc_id = data.terraform_remote_state.vpc.outputs.vpc_id
+  vpc_id = var.vpc_id
 
-  manage_vpc = data.terraform_remote_state.vpc.outputs.manage_vpc
+  manage_vpc = var.manage_vpc
+}*/
+
+variable "public_sub" {
+
 }
+variable "private_sub" {}
+variable "vpc_id" {}
+variable "manage_vpc" {}

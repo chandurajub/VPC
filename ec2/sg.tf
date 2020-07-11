@@ -1,7 +1,8 @@
 resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh"
   description = "Allow ssh inbound traffic"
-  vpc_id      = "${local.vpc_id}"
+  vpc_id      = "${var.vpc_id}"
+  //vpc_id      = "${local.vpc_id}"
 
   ingress {
     description = " from VPC"
@@ -25,7 +26,8 @@ resource "aws_security_group" "allow_ssh" {
 resource "aws_security_group" "allow_all" {
   name        = "allow_all"
   description = "Allow ssh inbound traffic"
-  vpc_id      = "${local.vpc_id}"
+  vpc_id      = "${var.vpc_id}"
+  //vpc_id      = "${local.vpc_id}"
 
   ingress {
     description = " from VPC"
